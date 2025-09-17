@@ -17,18 +17,17 @@
     background-color: rgba(0, 0, 0, 0.7);
     background-repeat: no-repeat;
     text-align: left;
-    padding: 10px 10px;
+    padding: 20px;
     background-size: cover;
     position: fixed;
-    width: 100%;
-  }
+    width: 100%;  }
 p {
-    font-size: 60px;
+    font-size: 55px;
     text-align: center;
     font-family: 'Sofia', sans-serif;
     color: white;
     position: absolute;
-    top: 15%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0);
@@ -40,15 +39,16 @@ p {
     font-family: 'Sofia', sans-serif;
     color: white;
     padding: 15px 32px;
-    font-size: 20px;
+    font-size: 15px;
     margin: 4px 2px;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0);
-     color: white;
+    background-color: rgba(0, 0, 0, 0); 
+    color: white;
     border: none;
     font-weight: bold;
   }
 .menu-buttons {
+    font-size: 20px;
     position: fixed;
     background-repeat: no-repeat;
     top: 40%;
@@ -56,16 +56,16 @@ p {
     transform: translate(-50%, -50%);
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-around;
-    margin: 0 5px;
+    /* justify-content: space-around; */
+    margin: 5px;
     min-width: 60px;
 }
     .p2 {
     font-family: Arial, Helvetica, sans-serif, sans-serif;
     color: white;
-    padding: 10px 20px;
-    font-size: 23px;  
-    margin: 10px 10px;
+    padding: 10px;
+    font-size: 15px;  
+    margin: 5px;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.7);
     border: none;
@@ -74,7 +74,7 @@ p {
     }
 
   img{
-    width: 100%;
+    max-width: 100%;
     height: auto;
     background-size: cover;
     display: block;
@@ -96,15 +96,30 @@ p {
     cursor: pointer;
     transform: scale(1.1);
     }
-     /* phone screen/ */
     @media screen and (max-width: 480px) {
       .p{font-size: 16px;}
-      .p1{font-size: 14px; padding: 8px 12px;}
+      .p1{font-size: 0.9rem; padding: 8px 12px;}
     }
     /* tablet screen/ */
     @media screen and  (max-width: 768px) {
       .p{font-size: 35px;}
-      .p1{font-size: 16px; padding: 10px 20px;}
+      .p1{font-size: 1rem; padding: 10px 20px;}
+      img {
+        height: 100vh;
+        width: 100vw;
+        object-fit: cover;
+    }
+    .button-background {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 3px;
+    }
+    .menu-buttons {
+        flex-direction: row;
+        align-items: center;
+        top: 50%;
+        gap: 0px;
+    }
     }
     </style>
 </head>
@@ -118,10 +133,10 @@ p {
     <div class="menu-buttons">
         <a href="food.html"><button class="p2">FOOD</button></a>
         <a href="drinks.html"><button class="p2">DRINKS</button></a>
-        <a href="deserts.html"><button class="p2">DESERTS</button></a>
-        <a href="hookah.html"><button class="p2">HOOKAH</button>  </a>
+        <a href="deserts.html"><button class="p2">DESSERTS</button></a>
+        <a href="hookah.html"><button class="p2">HOOKAH</button>  </a>  
     </div>
     <p>THE MENU</p>
-<img src="images/premium_photo-1667030986194-1ede16810993.jpg" alt="Italian Trulli">
+    <img src="images/premium_photo-1667030986194-1ede16810993.jpg" alt="">    
 </body>
 </html>

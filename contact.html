@@ -21,12 +21,13 @@ body {
   }
   .button-background {
     background-color: rgba(0, 0, 0, 0.7);
-    background-repeat: no-repeat;
     text-align: left;
-    padding: 10px 10px;
+    font-size: 10px;
+    padding-left: 5px;
     background-size: cover;
     position: fixed;
     width: 100%;
+
   }
   .p1 {
 
@@ -34,13 +35,26 @@ body {
     font-family: 'Sofia', sans-serif;
     color: white;
     padding: 15px 32px;
-    font-size: 20px;
+    font-size: 1.2rem;
     margin: 4px 2px;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0);
     border: none;
     font-weight: bold;
+    border-radius: 8px;
   }
+  .button-background:hover {
+    background-color: rgba(0, 0, 0, 1);
+  }
+  .p1:hover {
+    background-color: grey;
+    color: green;
+    border-radius: 12px;
+    transition: 0.5s;
+    font-weight: bold;
+    cursor: pointer;
+    transform: scale(1.1);
+    }
   .p2 {
     text-align: center;
     font-family: 'Sofia', sans-serif;
@@ -53,9 +67,12 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 15%;
-    left: 40%;
-  
+    padding-bottom: 25px;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
   }
   .location {
     text-align: center;
@@ -74,7 +91,8 @@ body {
   .contact {
     position: absolute;
     bottom: -10%;
-    left: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     font-family: 'Sofia', sans-serif;
     color: white;
@@ -83,18 +101,6 @@ body {
     border: none;
     font-weight: bold;
 
-    }
-  .button-background:hover {
-    background-color: rgba(0, 0, 0, 1);
-  }
-  .p1:hover {
-    background-color: grey;
-    color: green;
-    border-radius: 12px;
-    transition: 0.5s;
-    font-weight: bold;
-    cursor: pointer;
-    transform: scale(1.1);
     }
 .insagram:hover {
       transition: 0.5s;
@@ -117,11 +123,43 @@ body {
     transform: scale(1.2);
     color: white;
 }
+
 .form {
     color: white;
     font-weight: bold;
-
-
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    background: rgba(0,0,0,0.5);
+    padding: 24px 32px;
+    border-radius: 12px;
+}
+.form input[type="text"],
+.form input[type="number"],
+.form input[type="date"],
+.form input[type="message"] {
+    width: 220px;
+    padding: 8px;
+    margin: 0;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+}
+.form input[type="submit"] {
+    width: 120px;
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    background: #fff;
+    color: #222;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
 }
     /* phone screen/ */
     @media screen and (max-width: 480px) {
@@ -149,14 +187,12 @@ body {
     <a href="about.html"><button class="p1">ABOUT</button></a>
     <a href="contact.html"><button class="p1">CONTACT</button></a>
   </div>
-<form class="form" action="https://formsubmit.co/ramnghaeb13@gmail.com" method="POST" >
-
- >
-  <input id="name" type="text" name="name" placeholder=" Name" required style="position: absolute; top: 50%; left: 40%;"><br><br>
-  <input id="number of people" type="number" name="how many people" placeholder=" How many people" required min="1" step="1" pattern="\d*" inputmode="numeric" style="position: absolute; top: 55%; left: 40%;"><br><br>
-  <input id="date" type="date" name="date" placeholder=" Date" required style="position: absolute; top: 60%; left: 40%;"><br><br>
-  <input id="message" type="message" name="message" placeholder=" Message" style="position: absolute; top: 65%; left: 40%;"><br><br>
-  <input id="submit" type="submit" value="Submit" style="position: absolute; top: 70%; left: 40%;">
+<form class="form" action="https://formsubmit.co/ramnghaeb13@gmail.com" method="POST">
+  <input id="name" type="text" name="name" placeholder="Name" required>
+  <input id="number of people" type="number" name="how many people" placeholder="How many people" required min="1" step="1" pattern="\d*" inputmode="numeric">
+  <input id="date" type="date" name="date" placeholder="Date" required>
+  <input id="message" type="message" name="message" placeholder="Message">
+  <input id="submit" type="submit" value="Submit">
 </form>
 
 </body>
